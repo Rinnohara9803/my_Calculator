@@ -40,10 +40,10 @@ class _MyCalculatorState extends State<MyCalculator> {
           theEquation = '0';
           theResult = '0';
           theEquationFontSize = 40.0;
-          theResultFontSize = 60.0;
+          theResultFontSize = 45.0;
         } else if (buttonGame == '=') {
           theEquationFontSize = 40.0;
-          theResultFontSize = 50.0;
+          theResultFontSize = 45.0;
 
           theExpression = theEquation;
 
@@ -56,7 +56,7 @@ class _MyCalculatorState extends State<MyCalculator> {
             theResult = 'Error';
           }
         } else if (buttonGame == '⨂') {
-          theEquationFontSize = 60.0;
+          theEquationFontSize = 40.0;
           theResultFontSize = 40.0;
           theEquation = theEquation.substring(0, theEquation.length - 1);
         } else {
