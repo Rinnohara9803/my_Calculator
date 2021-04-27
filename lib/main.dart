@@ -30,8 +30,8 @@ class _MyCalculatorState extends State<MyCalculator> {
 
   void buttonPressed(String buttonGame) {
     setState(() {
-      if (theEquation.length > 18) {
-        theResult = 'Max Number \'18\' exceeded.';
+      if (theEquation.length > 15) {
+        theResult = 'Max Number \'15\' exceeded.';
         theResultFontSize = 20.0;
         // theResultColor = Colors.blueAccent;
         theEquation = '0';
