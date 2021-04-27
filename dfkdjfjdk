@@ -1,0 +1,94 @@
+class Firstbutton extends StatefulWidget {
+  Firstbutton(this.buttonName, this.buttonColor);
+
+  final String buttonName;
+  final Color buttonColor;
+  // final Function callBack;
+
+  @override
+  _FirstbuttonState createState() => _FirstbuttonState();
+}
+
+class _FirstbuttonState extends State<Firstbutton> {
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(8),
+      child: Neumorphic(
+        style: NeumorphicStyle(
+          shadowLightColor: Colors.purple,
+          shadowDarkColor: Colors.red,
+          depth: -10,
+          color: widget.buttonColor,
+          boxShape: NeumorphicBoxShape.roundRect(
+            BorderRadius.circular(35.0),
+          ),
+        ),
+        child: GestureDetector(
+          onTap: () {
+            ;
+          },
+          child: Container(
+            child: Center(
+              child: Text(
+                widget.buttonName,
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35.0,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            height: 70,
+            width: 75,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+class Lastbutton extends StatefulWidget {
+  Lastbutton(this.buttonName);
+
+  final buttonName;
+
+  @override
+  _LastbuttonState createState() => _LastbuttonState();
+}
+
+class _LastbuttonState extends State<Lastbutton> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(8),
+      child: Neumorphic(
+        style: NeumorphicStyle(
+          shadowLightColor: Colors.purple,
+          shadowDarkColor: Colors.red,
+          depth: -10,
+          color: Color(0xFFF9B52C),
+          boxShape: NeumorphicBoxShape.roundRect(
+            BorderRadius.circular(35.0),
+          ),
+        ),
+        child: Container(
+          child: Center(
+            child: Text(
+              widget.buttonName,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          height: 145,
+          width: 75,
+        ),
+      ),
+    );
+  }
+}
